@@ -1,49 +1,13 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import Layout from 'components/layout'
+import React from 'react';
 
-import Landing from 'scenes/landing'
+import Layout from '@/components/layout';
 
-const IndexPage = () => {
-  const { github } = useStaticQuery(pageQuery)
-
+function IndexPage() {
   return (
     <Layout>
-      <Landing data={github} />
+      <h1>Hello World!</h1>
     </Layout>
-  )
+  );
 }
 
-const pageQuery = graphql`
-  query {
-    github {
-      viewer {
-        repositories(
-          first: 6
-          isFork: false
-          privacy: PUBLIC
-          orderBy: { field: STARGAZERS, direction: DESC }
-        ) {
-          edges {
-            node {
-              id
-              name
-              url
-              description
-              forkCount
-              stargazers {
-                totalCount
-              }
-              primaryLanguage {
-                name
-                color
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
-
-export default IndexPage
+export default IndexPage;
