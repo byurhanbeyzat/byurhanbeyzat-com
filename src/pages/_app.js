@@ -1,12 +1,14 @@
 import React from 'react';
 import { DefaultSeo } from 'next-seo';
 
-import SEO from '../../next-seo.config';
+import SEOConfig from '@root/next-seo.config';
+
+import '@/styles/app.scss';
 
 function App({ Component, pageProps }) {
   return (
     <>
-      <DefaultSeo {...SEO} />
+      <DefaultSeo {...SEOConfig} />
       <Component {...pageProps} />
     </>
   );

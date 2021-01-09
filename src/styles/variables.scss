@@ -1,0 +1,18 @@
+:root {
+  --c-dark: #1a202c;
+  --c-white: #ffffff;
+  --c-primary-dark: #fff700;
+  --c-primary-light: #1559d8;
+
+  --c-theme: var(--c-white);
+  --c-highlight: var(--c-primary-light);
+  --c-default: rgba(0, 0, 0, 0.9);
+
+  --ff-sans: 'Inter', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+  --ff-mono: 'Space Mono', 'SF Mono', monospace;
+}
+
+html[data-theme='dark'] {
+  --c-theme: var(--c-dark);
+  --c-highlight: var(--c-primary-dark);
+}
