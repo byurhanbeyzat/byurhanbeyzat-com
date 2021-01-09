@@ -1,3 +1,3 @@
 # byurhanbeyzat-com 
 
-> *Personal website built with [Gatsby.js](https://www.gatsbyjs.org/)*
+> *Personal website built with [Next.js](https://nextjs.org/?ref=byurhanbeyzat.com)*
