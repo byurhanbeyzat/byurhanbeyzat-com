@@ -13,6 +13,7 @@
     "format": "prettier --write './src/**/*.{js,jsx,json}'"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "next": "^10.0.5",
     "next-seo": "^4.17.0",
     "prop-types": "^15.7.2",

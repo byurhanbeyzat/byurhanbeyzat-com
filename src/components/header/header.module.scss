@@ -1,0 +1,26 @@
+.header {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  a {
+    font-size: 17px;
+    font-weight: 500;
+    margin-right: 22px;
+  }
+}
