@@ -1,18 +1,34 @@
 :root {
-  --c-dark: #1a202c;
-  --c-white: #ffffff;
-  --c-primary-dark: #fff700;
-  --c-primary-light: #1559d8;
+  // Theme
+  --c-base: 0, 0, 0;
 
-  --c-theme: var(--c-white);
-  --c-highlight: var(--c-primary-light);
-  --c-default: rgba(0, 0, 0, 0.9);
+  --c-blue: #1559d8;
+  --c-yellow: #fff700;
 
+  --c-theme: #fff;
+  --c-highlight: var(--c-blue);
+
+  --c-gray: rgba(var(--c-base), 0.9);
+  --c-gray-light: rgba(var(--c-base), 0.65);
+  --c-gray-lighter: rgba(var(--c-base), 0.15);
+  --c-gray-lightest: rgba(var(--c-base), 0.07);
+
+  // Typography
   --ff-sans: 'Inter', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
   --ff-mono: 'Space Mono', 'SF Mono', monospace;
 }
 
 html[data-theme='dark'] {
-  --c-theme: var(--c-dark);
-  --c-highlight: var(--c-primary-dark);
+  // Theme
+  --c-base: 255, 255, 255;
+  --c-base1: 180, 180, 200;
+
+  --c-text: #ebebeb;
+  --c-theme: #1a202c;
+  --c-highlight: var(--c-yellow);
+
+  --c-gray: rgba(255, 255, 255, 0.9);
+  --c-gray-light: rgba(180, 180, 200, 0.65);
+  --c-gray-lighter: rgba(180, 180, 200, 0.15);
+  --c-gray-lightest: rgba(180, 180, 200, 0.07);
 }
