@@ -1,13 +1,14 @@
 @charset 'UTF-8';
 
-// 1
-@import './normalize.scss';
+// 1. Reset styles
+@import './reset.scss';
 
-// 2
+// 2. Settings/Variables
 @import './variables.scss';
-@import './typeface.scss';
+@import './fontface.scss';
 
-// 3
-@import './base.scss';
+// 3. Global
+@import './global.scss';
+@import './button.scss';
 
 

@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import cn from 'classnames';
 
-import { Header } from '@/components/header';
-import { Footer } from '@/components/footer';
-
-import styles from './main.module.scss';
+import { Header, Footer } from '@/components/layout';
 
 function Container({ children }) {
   const [mounted, setMounted] = useState(false);
@@ -14,7 +10,7 @@ function Container({ children }) {
   return (
     <>
       <Header isMounted={mounted} />
-      <main role="main" className={cn('container', styles.main)}>
+      <main role="main" className="container" style={{ marginTop: '56px' }}>
         {children}
       </main>
       <Footer />

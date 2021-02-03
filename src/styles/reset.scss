@@ -21,7 +21,26 @@ body {
   color: var(--c-text);
   background-color: var(--c-theme);
   transition: color, background-color 150ms ease-in;
+  overflow-x: hidden;
   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 800;
+}
+
+h1.big-title {
+  font-size: 44px;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h2 {
+  font-size: 32px;
 }
 
 ::selection {
@@ -32,6 +51,7 @@ body {
 button {
   border: 0;
   outline: 0;
+  cursor: pointer;
   background-color: transparent;
 }
 

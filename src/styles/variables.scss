@@ -5,20 +5,33 @@
   --c-blue: #1559d8;
   --c-yellow: #fff700;
 
-  --c-theme: #fff;
+  --c-text: #1a202c;
+  --c-theme: #ffffff;
   --c-highlight: var(--c-blue);
 
   --c-gray: rgba(var(--c-base), 0.9);
   --c-gray-light: rgba(var(--c-base), 0.65);
+  --c-gray-lightt: rgba(var(--c-base), 0.5);
   --c-gray-lighter: rgba(var(--c-base), 0.15);
   --c-gray-lightest: rgba(var(--c-base), 0.07);
 
   // Typography
   --ff-sans: 'Inter', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
   --ff-mono: 'Space Mono', 'SF Mono', monospace;
+
+  // Border radius
+  --radius-2: 2px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+
+  // Sizes
+  --width-sm: 700px;
+  --width-lg: 860px;
+  --width-base: 700px;
+
 }
 
-html[data-theme='dark'] {
+[data-theme='dark'] {
   // Theme
   --c-base: 255, 255, 255;
   --c-base1: 180, 180, 200;
@@ -29,6 +42,7 @@ html[data-theme='dark'] {
 
   --c-gray: rgba(255, 255, 255, 0.9);
   --c-gray-light: rgba(180, 180, 200, 0.65);
+  --c-gray-lightt: rgba(255, 255, 255, 0.5);
   --c-gray-lighter: rgba(180, 180, 200, 0.15);
   --c-gray-lightest: rgba(180, 180, 200, 0.07);
 }

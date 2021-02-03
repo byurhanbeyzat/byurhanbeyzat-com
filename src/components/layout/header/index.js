@@ -3,7 +3,7 @@ import cn from 'classnames';
 import NextLink from 'next/link';
 import { useTheme } from 'next-themes';
 
-import navLinks from './links';
+import navLinks from '../links';
 import styles from './header.module.scss';
 
 function ThemeToggleButton({ isMounted }) {
@@ -46,14 +46,14 @@ function ThemeToggleButton({ isMounted }) {
 
 function Header({ isMounted }) {
   return (
-    <header className={cn('container', styles.header)} role="banner">
+    <header className={cn(['container-lg', styles.header])} role="banner">
       <h3 className={styles.logo}>
         <NextLink href="/">byurhan.</NextLink>
       </h3>
       <nav className={styles.nav} role="menu">
-        {navLinks.map((link) => (
-          <NextLink href={link.href} key={link.id}>
-            <a>{link.label}</a>
+        {navLinks.general.map((link) => (
+          <NextLink href={link.href} key={link.id} aria-label={link.label}>
+            <a aria-label={link.label}>{link.label}</a>
           </NextLink>
         ))}
         <ThemeToggleButton isMounted={isMounted} />

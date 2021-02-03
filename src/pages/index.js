@@ -5,7 +5,7 @@ import Container from '@/components/container';
 function IndexPage() {
   return (
     <Container>
-      <h1>Hello World!</h1>
+      <h1>Home page content</h1>
     </Container>
   );
 }

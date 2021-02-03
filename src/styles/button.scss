@@ -1,0 +1,13 @@
+.button {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 12px 28px;
+  color: var(--c-gray);
+  border-radius: var(--radius-4);
+  background-color: var(--c-gray-lightest);
+  transition: background-color 250ms ease-in;
+
+  &:hover {
+    background-color: var(--c-gray-lighter);
+  }
+}

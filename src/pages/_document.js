@@ -11,7 +11,7 @@ class MyDocument extends Document {
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
-            href="/fonts/inter.var.woff2"
+            href="/fonts/inter-var.woff2"
           />
         </Head>
         <body>
