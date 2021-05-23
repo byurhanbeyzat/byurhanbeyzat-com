@@ -1,0 +1,31 @@
+.heroWrapper {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  .title {
+    font-size: 36px;
+    font-weight: 800;
+  }
+  
+  .description {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 2px;
+    
+    .logo {
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--c-highlight);
+    }
+  }
+  
+  .buttonContainer {
+    a:last-of-type {
+      margin-left: 22px;
+    }
+  }
+}

@@ -16,7 +16,8 @@
   --c-gray-lightest: rgba(var(--c-base), 0.07);
 
   // Typography
-  --ff-sans: 'Inter', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+  // --ff-sans: 'Inter', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+  --ff-sans: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --ff-mono: 'Space Mono', 'SF Mono', monospace;
 
   // Border radius

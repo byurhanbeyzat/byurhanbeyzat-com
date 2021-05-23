@@ -1,13 +1,9 @@
 import React from 'react';
 
-import Container from '@/components/container';
+import { HomepageContent } from '@/screens';
 
-function IndexPage() {
-  return (
-    <Container>
-      <h1>Home page content</h1>
-    </Container>
-  );
+function HomePage() {
+  return <HomepageContent />;
 }
 
-export default IndexPage;
+export default HomePage;

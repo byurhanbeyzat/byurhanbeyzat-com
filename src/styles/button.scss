@@ -1,13 +1,27 @@
-.button {
+.btn {
   font-size: 16px;
   font-weight: 400;
-  padding: 12px 28px;
-  color: var(--c-gray);
+  padding: 11px 20px;
   border-radius: var(--radius-4);
-  background-color: var(--c-gray-lightest);
   transition: background-color 250ms ease-in;
 
-  &:hover {
-    background-color: var(--c-gray-lighter);
+  &-primary {
+    color: var(--c-theme);
+    background-color: var(--c-highlight);
+
+    &:hover {
+      color: var(--c-theme);
+      background-color: var(--c-highlight);
+    }
+  }
+
+  &-secondary {
+    color: var(--c-gray);
+    background-color: var(--c-gray-lightest);
+
+    &:hover {
+      color: var(--c-gray);
+      background-color: var(--c-gray-lighter);
+    }
   }
 }

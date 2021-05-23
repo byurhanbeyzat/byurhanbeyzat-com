@@ -1,13 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
-import SEO from '@/components/seo';
+import NextLink from 'next/link';
 
 import Container from '@/components/container';
 
 function NotFoundPage() {
   return (
-    <Container>
-      <SEO title="404" />
+    <Container title="404">
       <div className="text-center">
         <h1 className="big-title">451</h1>
         <h2>Unavailable For Legal Reasons</h2>
@@ -18,11 +16,9 @@ function NotFoundPage() {
           you double check that URL?
         </p>
         <br />
-        <Link href="/">
-          <a aria-label="Home" className="button">
-            Return Home
-          </a>
-        </Link>
+        <NextLink href="/">
+          <a className="btn btn-secondary">Return Home</a>
+        </NextLink>
       </div>
     </Container>
   );
