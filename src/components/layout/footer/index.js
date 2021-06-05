@@ -1,12 +1,11 @@
 import React from 'react';
-import cn from 'classnames';
 import NextLink from 'next/link';
 
-import Icon from '@/components/icon';
+import { Icon, Container } from '@/components/common';
 import { socialLinks } from '@/constants';
 
+import { StyledFooter } from './styles';
 import navLinks from '../links';
-import styles from './footer.module.scss';
 
 function FooterLink({ id, href, label, avaliable }) {
   return (
@@ -25,16 +24,16 @@ function Footer() {
   };
 
   return (
-    <footer className={cn('container', styles.footer)} role="contentinfo">
-      <div className={styles.pageLinks}>
-        <div className={styles.linksWrapper}>
-          <div className={styles.linkList}>
+    <StyledFooter as={Container} large role="contentinfo">
+      <div className="page-links">
+        <div className="links-wrapper">
+          <div className="links-list">
             <h4>General</h4>
             {navLinks.general.map((link) => (
               <FooterLink {...link} key={link.id} />
             ))}
           </div>
-          <div className={styles.linkList}>
+          <div className="links-list">
             <h4>Extras</h4>
             {navLinks.extras.map((link) => (
               <FooterLink {...link} key={link.id} />
@@ -42,14 +41,14 @@ function Footer() {
           </div>
         </div>
 
-        <div className={styles.scrollButton}>
+        <div className="scroll-button">
           <button type="button" onClick={() => scrollToTop()}>
             <Icon icon="ArrowUp" width="20px" height="20px" />
           </button>
         </div>
       </div>
 
-      <div className={styles.socialLinks}>
+      <div className="social-links">
         {socialLinks.map((link) => (
           <a
             key={link.id}
@@ -63,7 +62,7 @@ function Footer() {
           </a>
         ))}
       </div>
-    </footer>
+    </StyledFooter>
   );
 }
 

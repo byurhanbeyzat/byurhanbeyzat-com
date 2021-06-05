@@ -1,14 +1,13 @@
 import React from 'react';
 
-import Container from '@/components/container';
+import { Layout } from '@/components/layout';
 import { Hero } from './hero';
-import styles from './home.module.scss';
 
 function HomepageContent() {
   return (
-    <Container>
+    <Layout>
       <Hero />
-    </Container>
+    </Layout>
   );
 }
 

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-import { Header, Footer } from '@/components/layout';
+import { Container } from '@/components/common';
+import { Header } from './header';
+import { Footer } from './footer';
 import SEO from '../seo';
 
-function Container({ children, title }) {
+function Layout({ children, title }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
@@ -12,12 +14,12 @@ function Container({ children, title }) {
     <>
       {title && <SEO title={title} />}
       <Header isMounted={mounted} />
-      <main role="main" className="container" style={{ marginTop: '56px' }}>
+      <Container role="main" as="main" style={{ marginTop: '56px' }}>
         {children}
-      </main>
+      </Container>
       <Footer />
     </>
   );
 }
 
-export default Container;
+export { Layout };

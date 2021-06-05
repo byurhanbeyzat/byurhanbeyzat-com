@@ -1,7 +1,7 @@
 import React from 'react';
 import NextLink from 'next/link';
 
-import Container from '@/components/container';
+import Container from '@/components/common/container';
 
 function NotFoundPage() {
   return (

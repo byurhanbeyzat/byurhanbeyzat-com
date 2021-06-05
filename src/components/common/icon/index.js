@@ -18,4 +18,4 @@ function Icon({ icon, ...props }) {
   return <></>;
 }
 
-export default Icon;
+export { Icon };

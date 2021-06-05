@@ -1,18 +1,17 @@
 import React from 'react';
-import cn from 'classnames';
 import NextLink from 'next/link';
 import { useTheme } from 'next-themes';
 
+import { Container } from '@/components/common';
+import { StyledHeader, HeaderLogo, StyledNav, ThemeButton } from './styles';
 import navLinks from '../links';
-import styles from './header.module.scss';
 
 function ThemeToggleButton({ isMounted }) {
   const { theme, setTheme } = useTheme();
 
   return (
-    <button
+    <ThemeButton
       type="button"
-      className={styles.themeButton}
       aria-label="Toggle Dark Mode"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
@@ -40,25 +39,27 @@ function ThemeToggleButton({ isMounted }) {
           )}
         </svg>
       )}
-    </button>
+    </ThemeButton>
   );
 }
 
 function Header({ isMounted }) {
   return (
-    <header className={cn(['container-lg', styles.header])} role="banner">
-      <h3 className={styles.logo}>
-        <NextLink href="/">byurhan.</NextLink>
-      </h3>
-      <nav className={styles.nav} role="menu">
+    <StyledHeader as={Container} large role="banner">
+      <HeaderLogo>
+        <NextLink href="/">
+          <a>byurhan.</a>
+        </NextLink>
+      </HeaderLogo>
+      <StyledNav role="menu">
         {navLinks.general.map((link) => (
           <NextLink href={link.href} key={link.id} aria-label={link.label}>
             <a aria-label={link.label}>{link.label}</a>
           </NextLink>
         ))}
         <ThemeToggleButton isMounted={isMounted} />
-      </nav>
-    </header>
+      </StyledNav>
+    </StyledHeader>
   );
 }
 

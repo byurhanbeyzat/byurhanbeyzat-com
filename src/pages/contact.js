@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Container from '@/components/container';
+import { Layout } from '@/components/layout';
 
 function ContactPage() {
   return (
-    <Container title="Contact">
+    <Layout title="Contact">
       <h1>Contact page content</h1>
-    </Container>
+    </Layout>
   );
 }
 
