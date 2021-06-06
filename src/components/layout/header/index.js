@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import NextLink from 'next/link';
 import { useTheme } from 'next-themes';
 
 import { Container } from '@/components/common';
+import { navLinks } from '../links';
 import { StyledHeader, HeaderLogo, StyledNav, ThemeButton } from './styles';
-import navLinks from '../links';
 
 function ThemeToggleButton({ isMounted }) {
-  const { theme, setTheme } = useTheme();
+  const { theme, systemTheme, setTheme } = useTheme();
+  const [loadedTheme, setLoadedTheme] = useState('light');
+
+  useEffect(() => {
+    if (theme === 'system') {
+      setLoadedTheme(systemTheme);
+    } else {
+      setLoadedTheme(theme);
+    }
+  }, [systemTheme, theme]);
 
   return (
     <ThemeButton
       type="button"
       aria-label="Toggle Dark Mode"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(loadedTheme === 'dark' ? 'light' : 'dark')}
     >
       {isMounted && (
         <svg
@@ -22,7 +31,7 @@ function ThemeToggleButton({ isMounted }) {
           stroke="currentColor"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {theme === 'dark' ? (
+          {loadedTheme === 'dark' ? (
             <path
               strokeWidth={2}
               strokeLinecap="round"

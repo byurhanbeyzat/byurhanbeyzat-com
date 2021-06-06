@@ -1,11 +1,11 @@
 import React from 'react';
 import NextLink from 'next/link';
 
-import Container from '@/components/common/container';
+import { Layout } from '@/components/layout';
 
 function NotFoundPage() {
   return (
-    <Container title="404">
+    <Layout title="404">
       <div className="text-center">
         <h1 className="big-title">451</h1>
         <h2>Unavailable For Legal Reasons</h2>
@@ -20,7 +20,7 @@ function NotFoundPage() {
           <a className="btn btn-secondary">Return Home</a>
         </NextLink>
       </div>
-    </Container>
+    </Layout>
   );
 }
 

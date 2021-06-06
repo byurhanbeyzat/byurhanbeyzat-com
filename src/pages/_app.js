@@ -7,7 +7,7 @@ import SEOConfig from '@root/next-seo.config';
 
 function App({ Component, pageProps }) {
   return (
-    <ThemeProvider>
+    <ThemeProvider enableSystem defaultTheme="system">
       <GlobalCSSReset />
       <DefaultSeo {...SEOConfig} />
       <Component {...pageProps} />

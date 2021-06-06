@@ -5,7 +5,7 @@ import { Icon, Container } from '@/components/common';
 import { socialLinks } from '@/constants';
 
 import { StyledFooter } from './styles';
-import navLinks from '../links';
+import { navLinks } from '../links';
 
 function FooterLink({ id, href, label, avaliable }) {
   return (
